@@ -118,10 +118,28 @@ Type Conversion adalah proses mengubah satu tipe data menjadi tipe data lain.
 
     - Explicit Conversion adalah konversi tipe data yang dilakukan secara eksplisit oleh programmer menggunakan metode atau fungsi tertentu.
 
-        Operator aritmatika
-Digunakan untuk melakukan operasi matematika.
-    + (Penjumlahan)     % (Modulus: Sisa bagi)
+
+
+            [ Operator aritmatika ] (module 5) (main.js)
+Digunakan untuk melakukan operasi Matematika.
+    + (Penjumlahan)     %  (Modulus: Sisa bagi)
     - (Pengurangan)     ** (Eksponen: Pangkat)
     * (Perkalian)       ++ (Increment: Menambah satu nilai)
     / (Pembagian)       -- (Decrement: Mengurangi satu nilai)
-    
+
+            [Operator assigment] (module 5) (assigment.js)
+Digunakan untuk menetapkan nilai ke variable.
+    = (assigment dasar)               *= (Perkalian dan assigment)
+    += (Penjumlahan dan assigment)    /= (Pembagian dan assigment)
+    -= (Pengurangan dan assigment)    %= (modulus dan assigment)
+
+            [Operator Perbandingan] (comparison) (module 5) (operator.js)
+Digunakan untuk membandingkan dua nilai
+yang menghasilkan nilai Boolean (true atau False)
+    == (sama dengan, mengecek nilai)
+    === (sama dengan secara ketat,mengecek nilai dan tipe data)
+    != (tidak sama dengan,mengecek nilai jika tidak sama)
+    !== (tidak sama dengan secara ketat)
+    > (lebih Besar dari)    < (lebih kecil dari)
+    >= (lebih besar atau sama dengan)
+    <= (lebih kecil atau sama dengan)
