@@ -1,0 +1,127 @@
+
+                 ====    Java Script     =====
+
+    pemrograman yang digunakan untuk membuat halaman web lebih interaktif dan dinamis. 
+Biasanya dipakai untuk menambahkan animasi, validasi form, atau mengubah elemen halaman tanpa perlu memuat ulang. 
+Selain untuk frontend, JavaScript juga bisa digunakan di backend dengan Node.js.
+
+    sederhananya di dalam konsep
+- HTML adalah Kerangka/Tulangnya
+- CSS adalah Kulit/Bajunya
+- JS adalah Otak atau Sistem saraf
+
+Langkah kerja Javascript sendir yaitu
+    Parsing  :browser membaca HTML dan membentuk DOM(Document Object Model)
+    Eksekusi :Mesin Javascript akan mengeksekusi kode JS sesuai urutan,
+              berinteraksi dgn DOM untuk Memanipulasi elemen
+    Event Loop :JS menangani event secara asinkron melalui event loop,
+              memunkin kan interaksi dinamis tanpa memblokir Eksekusi kode lain 
+
+        Tipe Data Primitif
+
+    Data primitif adalah tipe data dasar dalam pemrograman yang digunakan untuk menyimpan nilai sederhana. 
+Tipe data ini biasanya sudah tersedia secara langsung dalam bahasa 
+pemrograman dan tidak terdiri dari struktur yang lebih kompleks.
+
+ada beberapa jenis yaitu sebagai berikut :
+    String : tipe data untuk teks(karakter atau kata)
+                di tulis dalam tanda kutip(' '," ",atau ` `)
+    Number : tipe data untuk angka(baik bilangam bulat maupun desimal)
+    Boolean : tipe data untuk nilai logika: True atau False 
+    Undefined : Nilai untuk Variable yang deklarasikan tetapi belum di isi nilai
+    Null : tipe data untuk nialai kosong secara sengaja
+    Symbol(ES6) : tipe data untuk membuat identifier yang bersifat unik (uniqueId)
+    `BigInt : tipe data untuk angka yang lebih besar dari batas Number (± 2^53 - 1)
+            ditulis dengan menambahkan ' n ' di akhir angka 
+
+    | Contoh penggunaan |
+    let a = "Hello"  // String
+    let b = 42;      // Number
+    let c = true;    // Boolean
+    let d;           // Undefined
+    let e = null;    // Null
+    let f = Symbol('unique'); // Symbol
+    let g = 12345678901234567890n; // BigInt
+
+    console.log(typeof a); // string
+    console.log(typeof b); // number
+    console.log(typeof c); // boolean
+    console.log(typeof d); // undefined
+    console.log(typeof e); // object (quirk)
+    console.log(typeof f); // symbol
+    console.log(typeof g); // BigInt
+
+
+Perbedaan Primitif dengan Non-Primitif
+
+        Primitif:
+    -Tidak memiliki properti/metode.
+    -Disimpan langsung di memori.
+    -Immutable (tidak dapat diubah, hanya bisa diganti).
+    
+        Non-Primitif (seperti Object atau Array):
+    -Memiliki properti/metode.
+    -Disimpan sebagai referensi.
+
+
+        Tipe data Referensi (module 3)
+    tipe data yang menyimpan referensi (alamat memori) ke lokasi di mana data sebenarnya di simpan.
+Tipe ini digunakan untuk struktur data yang lebih kompleks,seperti object,array,atau fungsi
+
+    Jenis jenis data referensi:
+1. Object 
+    - object adalah tipe data kompleks yang digunakan untuk menyimpan koleksi
+        data dalam pasangan key-value (properti dan nilai)
+    - di tulis dengan {}
+        contoh :
+    const person = { name: "Alice", age: 25 }; // Object
+
+2. Array
+    - koleksi data yang di gunakan untuk menyimpan koleksi nilai dalam satu variable
+    - ditulis dengan tanda kurung siku []
+        contoh :
+    const numbers = [1, 2, 3]; // Array adalah objek 
+
+3. Function
+    - sebuah blok kode yang dapat di gunakan kembali ,yang juga di anggap sebagai Object di Javascript
+    - blok kode yang dapat di panggil atau di Eksekusi
+    - di tulid dengan kata kunci 'function' atau menggunakan arrow function () => {}
+        contoh : 
+    function sayHello() {
+    console.log("Hello!");
+    }
+    sayHello(); // Function adalah objek
+
+
+
+        [ Perbedaan utama Tipe Reference dan Primitif ]
+        
+- Penyimpanan: Tipe data Primitif disimpan di stack memory dengan nilai langsungnya,
+                    (langusng menuju nilai tersebut)
+        Sedangkan Reference types disimpan di heap memory dan variable hanya menyimpan referensi ke data tersebut
+
+- Perubahan Nilai: Pada tipe data primitif, mengubah nilai variable tidak memengaruhi variable lain yang-
+                        Menyimpan salinan tersebut.
+                    Sedangkan pada reference types,mengubah data melalui satu variable akan memengaruhi veriable-
+                        lain yang merujuk ke object yang sama
+
+- Kinerja: Operasi pada tipe data primitif biasanya lebih cepat dan menggunakan lebih sedikit memori dibandingkan
+                        reference types karena penyimpanan akses langusng ke nilai
+
+            
+        Type Conversion (module 4)
+Type Conversion adalah proses mengubah satu tipe data menjadi tipe data lain.
+    Terdapat dua jenis konversi: Implicit Conversion (Coercion) dan Explicit Conversion.
+
+    - Implicit Conversion adalah konversi tipe data yang dilakukan secara otomatis oleh JavaScript.
+        Terjadi ketika JavaScript mencoba menyesuaikan tipe data secara otomatis selama operasi tertentu.
+
+    - Explicit Conversion adalah konversi tipe data yang dilakukan secara eksplisit oleh programmer menggunakan metode atau fungsi tertentu.
+
+        Operator aritmatika
+Digunakan untuk melakukan operasi matematika.
+    + (Penjumlahan)     % (Modulus: Sisa bagi)
+    - (Pengurangan)     ** (Eksponen: Pangkat)
+    * (Perkalian)       ++ (Increment: Menambah satu nilai)
+    / (Pembagian)       -- (Decrement: Mengurangi satu nilai)
+    

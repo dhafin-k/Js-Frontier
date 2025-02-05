@@ -1,0 +1,80 @@
+        ====    Null    ====    
+    
+
+Link website :
+https://github.com/rohan-paul/Awesome-JavaScript-Interviews/blob/master/Javascript/Tricky-JS-Problems/typeof-null-why-its-object.md 
+
+Jika Null adalah Primitif,kenapa nilai yang di kembalikan dari type(null) adalah Object?
+
+   | Explaination-1 |
+
+If null is a primitive, why does typeof(null) return "object"?
+Because the spec says so.
+
+11.4.3 The typeof Operator
+The production UnaryExpression : typeof UnaryExpression is evaluated as follows:
+    - Let val be the result of evaluating UnaryExpression.
+    - If Type(val) is Reference, then    
+        a. If IsUnresolvableReference(val) is true, return "undefined".    
+        b. Let val be GetValue(val).
+
+
+   | Explaination-2 |
+
+    // This stands since the beginning of JavaScript
+    typeof null === 'object';
+In the first implementation of JavaScript, JavaScript values were represented as a type tag and a value. 
+The type tag for objects was 0. null was represented as the NULL pointer (0x00 in most platforms). 
+Consequently, null had 0 as type tag, hence the "object" typeof return value. 
+
+
+   | Explaination-3 |
+
+    This page has a nice description of the history here surrounding why typeof(null) gives "object": JS Data Types - Null
+
+Here is the relevant portion (although I would suggest you read the whole post):
+    Why does typeof null return "object"? // What's happening here? >typeof null === "object"; https://262.ecma-international.org/5.1/#sec-11.4.3
+    // true The answer might disappoint some, but the truth is simply because the table above says to do so.
+
+    The reasoning behind this is that null, in contrast with undefined, was (and still is) often used where objects appear. 
+In other words, null is often used to signify an empty reference to an object. When Brendan Eich created JavaScript, 
+he followed the same paradigm, and it made sense (arguably) to return "object". 
+In fact, the ECMAScript specification defines null as the primitive value that represents the intentional absence of any object value 
+                    (ECMA-262, 11.4.11).
+
+    Translate:
+    Alasan di balik ini adalah bahwa null, berbeda dengan undefined, sering digunakan di mana objek muncul. 
+Dengan kata lain, null sering digunakan untuk menandakan referensi kosong ke sebuah objek. Ketika Brendan Eich menciptakan JavaScript, 
+ia mengikuti paradigma yang sama, dan masuk akal (setidaknya secara argumen) untuk mengembalikan hasil typeof null sebagai "object". 
+Bahkan, spesifikasi ECMAScript mendefinisikan null sebagai nilai primitif yang merepresentasikan ketiadaan nilai objek secara sengaja 
+                    (ECMA-262, 11.4.11).
+
+
+    To draw a parallel here, consider typeof(NaN) === "number". 
+So why does JavaScript give "number" as the type of NaN (not a number)? It is because NaN is used where numbers appear, 
+it is a value that represents the intentional absence of a number value. Similar reasoning applies to null, 
+the only difference being that null is implemented as a primitive and NaN is actually implemented as a Number object 
+                    (so NaN.foo = 42 would actually work).
+
+    Translate :
+    Untuk membuat analogi, perhatikan contoh typeof(NaN) === "number". 
+Mengapa JavaScript memberikan tipe "number" untuk NaN (Not a Number)? Hal ini karena NaN digunakan di mana angka muncul. 
+NaN adalah nilai yang merepresentasikan ketiadaan nilai angka secara sengaja. Alasan serupa berlaku untuk null, 
+dengan perbedaan utama bahwa null diimplementasikan sebagai tipe primitif, sedangkan NaN sebenarnya diimplementasikan sebagai objek Number 
+                (sehingga pernyataan seperti NaN.foo = 42 sebenarnya akan berhasil dijalankan).
+
+
+
+        Kesimpulannya :
+    1.null dianggap sebagai "object" karena, secara historis, null digunakan untuk menunjukkan referensi kosong terhadap sebuah objek. 
+        Ini adalah desain awal JavaScript yang mengikuti paradigma saat itu.
+    
+    2.typeof null === "object" adalah hasil dari keputusan desain awal JavaScript, dan meskipun terkesan tidak konsisten, 
+        hal ini tetap dipertahankan untuk kompatibilitas ke belakang.
+
+    3.Analoginya dengan NaN: Sama seperti NaN yang merupakan nilai khusus untuk menandakan ketiadaan angka yang valid, 
+        null menandakan ketiadaan objek secara sengaja, meskipun null adalah tipe primitif, sedangkan NaN adalah bagian dari tipe Number.
+
+    Jadi, meskipun hasil typeof null === "object" mungkin terlihat membingungkan, 
+    ini adalah bagian dari cara JavaScript mendesain tipe datanya berdasarkan kebutuhan untuk menunjukkan   
+    "ketiadaan" (baik untuk objek maupun angka).
