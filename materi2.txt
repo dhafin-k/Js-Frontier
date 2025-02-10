@@ -1,0 +1,12 @@
+
+                 ====    Java Script     =====
+
+    Ini adalah lanjutan materi pertama (materi.txt) dan ini adalah yang kedua
+pada bagian ini akan menjelaskan materi materi lanjutan yang akan di pelajari
+
+        [String]
+String adalah tipe data primitiif di JavaScript yang di gunakan untuk
+mempresentasikan teks.
+String diapit oleh tanda kutip tunggal ('..'),tanda kutip ganda("..")
+atau backticks (`..`)
+    

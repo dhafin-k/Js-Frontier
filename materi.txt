@@ -133,7 +133,6 @@ Digunakan untuk menetapkan nilai ke variable.
     += (Penjumlahan dan assigment)    /= (Pembagian dan assigment)
     -= (Pengurangan dan assigment)    %= (modulus dan assigment)
 
-            [Operator Perbandingan] (comparison) (module 5) (operator.js)
 Digunakan untuk membandingkan dua nilai
 yang menghasilkan nilai Boolean (true atau False)
     == (sama dengan, mengecek nilai)
@@ -142,4 +141,3 @@ yang menghasilkan nilai Boolean (true atau False)
     !== (tidak sama dengan secara ketat)
     > (lebih Besar dari)    < (lebih kecil dari)
     >= (lebih besar atau sama dengan)
-    <= (lebih kecil atau sama dengan)
