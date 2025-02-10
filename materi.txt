@@ -133,6 +133,7 @@ Digunakan untuk menetapkan nilai ke variable.
     += (Penjumlahan dan assigment)    /= (Pembagian dan assigment)
     -= (Pengurangan dan assigment)    %= (modulus dan assigment)
 
+            [Operator Comparison] (perbandingan) (module 5) (operator.js)
 Digunakan untuk membandingkan dua nilai
 yang menghasilkan nilai Boolean (true atau False)
     == (sama dengan, mengecek nilai)
@@ -141,3 +142,21 @@ yang menghasilkan nilai Boolean (true atau False)
     !== (tidak sama dengan secara ketat)
     > (lebih Besar dari)    < (lebih kecil dari)
     >= (lebih besar atau sama dengan)
+    <= (lebih kecil atau sama dengan)
+
+            [Operator Logika] (module 5) (logika.js)
+Digunakan untuk menggabungkan ekspresi logika dan 
+menghasilkan nilai boolean
+    && (AND: menghasilkan true jika kedua operand true)
+    || (OR: menghasilkan true jika salah satu operand true)
+    ! (NOT: Membalikkan nilai boolean operand)
+
+            [Operator Ternary] (ternary.js) (module 5)
+operator Ternary adalah operator kondisional yang merupakan 
+cara singkat untuk menulis  if-else
+
+    condition? expressionIfTrue : expressionIfFalse;
+    let age = 18
+    let canVote = (age>=18 ? "yes" : "no")
+        // apakah umur user lebih dari 18?
+    console.log(canVote) maka hasil yes
