@@ -4,9 +4,60 @@
     Ini adalah lanjutan materi pertama (materi.txt) dan ini adalah yang kedua
 pada bagian ini akan menjelaskan materi materi lanjutan yang akan di pelajari
 
-        [String]
-String adalah tipe data primitiif di JavaScript yang di gunakan untuk
+                [String]  (module 6) (main.js)
+   String adalah tipe data primitiif di JavaScript yang di gunakan untuk
 mempresentasikan teks.
 String diapit oleh tanda kutip tunggal ('..'),tanda kutip ganda("..")
 atau backticks (`..`)
-    
+ 
+        String juga memiliki beberapa property yaitu:
+   - length,mengetahui panjang string
+   - toLowerCase,menjadikan seluruh huruf kecil
+   - toUpperCase,menjadikan seluruh huruf besar 
+   - trim, menghapus spasi di dalam string
+
+        | Manipulasi String |
+(1)
+   - Menggabungkan string (concat)
+   - mengambil bagian dari string berdasarkan indeks (slice)
+   - mengganti bagian dari string menjadi string yang baru
+(2)
+   - membagi sebuah string array berdasarkan seperator yang di berikan (split)
+   - menggabungkan semua elemen dalam array menjadi sebuah string (join)
+        
+        | Pencarian String |
+   - indexOf(): mengembalikan indeks dari kemunculan pertama substring dalam string,
+                        atau mereturn -1 jika tidak di temukan.
+   - lastIndexOf(): mengembalikan indeks dari kemunculan terakhir substring dalam string
+   - includes(): mengembalikan true jika string mengandung substring yang ditentukan,
+                        sebaliknya False
+
+
+                [ Numbers ] (module 7)
+   Di JavaScript, tipe data Number di gunakan untuk mempresentasikan angka.
+Angka ini bisa berupa bilangan bulat (interger), pecahan (floating point), atau
+bilangan khusus seperti Infinity dan NaN (Not-a-Number)
+   
+   Java Script menyediakan beberapa property pada object number yang berguna:
+   - MAX_VALUE             - MIN_VALUE
+   - POSITIVE_INFINITY     - NEGATIVE_INFINITY
+   - NaN (Not an number)
+
+         | Metode Number | (main.js)
+yang berfungsi untuk mengubah tipe data contoh nya:
+   - toString()          number to string (decimal)
+   - toFixed(digits)     number to string
+   - toPrecision(digits) string to interger
+   - parseInt()          string to number (decimal)
+   - parseFloat()        string to number (pecahan)(utuh)
+
+
+                [Math Object] (module 8)
+Apa itu Math Object?,
+Math Object di JavaScript adalah object bawaan yang berisi berbagai properti dan 
+metode untuk melakukan operasi matematika
+
+      Properti Math:
+   - Math.PI :mengembalikan nilai 𝜋 (3.14159...).
+   - Math.E  :mengembalikan nilai konstanta Eular (2.718...)
+   
